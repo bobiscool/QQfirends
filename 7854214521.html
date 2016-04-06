@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title><script>
+    window.onload = function(){
+        var aP = document.getElementsByTagName('p');
+        var arr = ['hshdjh','hjkejiqwj','ehdqje','fewjfklejf','e4tersvs','ret5ytr','5451ef','wqqwr']
+        var aBtn = document.getElementsByTagName('input');
+        //z这里有一个知识点 ,就是不要在for里面  包含数的部分用i
+        for(var i =0;i< aBtn.length;i++){
+            aBtn[i].a = i;
+            aBtn[i].onclick = function(){
+                alert(arr[this.a]);//添加索引值  index
+                aP[this.a].innerHTML= arr[this.a];
+            };
+
+        }
+    };
+</script>
+</head>
+<body>
+<input type="button" value="btn1">
+
+
+<input type="button" value="btn2">
+
+
+<input type="button" value="btn3">
+
+
+<input type="button" value="btn4">
+
+
+<input type="button" value="btn5">
+
+
+<input type="button" value="btn6">
+
+
+<input type="button" value="btn7">
+
+
+<input type="button" value="btn8">
+
+<p>a</p>
+<p>b</p>
+<p>c</p>
+<p>d</p>
+<p>e</p>
+<p>f</p>
+<p>g</p>
+<p>h</p>
+<p>i</p>
+<p>j</p>
+<p>k</p>
+<p>l</p>
+<p>m</p>
+<p>n</p>
+<p>o</p>
+<p>p</p>
+<p>q</p>
+<p>r</p>
+<p>s</p>
+<p>t</p>
+<p>u</p>
+<p>v</p>
+<p>w</p>
+<p>x</p>
+<p>y</p>
+<p>z</p>
+<p>fa</p>
+<p>bff</p>
+<p>cff</p>
+<p>fff</p>
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #content {
+        width:400px;
+        height: 400px;
+        border:10px solid #ccc;
+        margin: 40px  auto 0;
+        position: relative;}
+    #content a {width: 40px;
+        height: 40px;
+        background: #000;
+        border:5px solid #ffffff;
+        position: absolute;
+        top: 175px;
+        text-align:center;
+        text-decoration: none;
+        line-height: 40px;
+        color: #ffffff;font-size: 30px;
+        font-weight: bold;
+        filter: 0.4;
+    }
+    #content a:hover {}
+    #prev  {
+        left: 10px;filter: 0.5; }
+    #next {
+        right: 10px;filter: 0.5; }
+    #text {
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:400px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color:#ffffff;
+        background: #000000;
+        margin: 0px;
+       filter:alpha(opcity:90);opacity: 0.4;
+    }
+    #span1 {
+        position: absolute;
+        top:0;
+        left:200px;
+        width: 400 px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+        background: #000000;
+        opacity: 0.5;
+        margin: 0;}
+    #img1 {  width: 400px;height: 400px;
+        left: 00px;
+        top:00px;
+        z-index: -1;
+        position: absolute; }
+</style>
+    <script>
+        window.onload = function (){
+            var oPrev = document.getElementByid('prev');
+            var oNext = document.getElementByid('next');
+            var oText = document.getElementByid('text');
+            var oSpn = document.getElementByid('span1');
+            var oImg = document.getElementByid('img1');
+            var arrUrl = ['/Users/mac/WebstormProjects/照着精通css敲的/untitled1/2.jpg','/Users/mac/WebstormProjects/照着精通css敲的/untitled1/2.jpg','/Users/mac/WebstormProjects/照着精通css敲的/untitled1/4.jpg','/Users/mac/WebstormProjects/照着精通css敲的/untitled1/5.jpg'];
+            var arrText = ['A','B','C','D'];
+            var num = 0;
+           function.fnTab()
+            {
+                oSpn.innerHTML = num + 1 + '/' + arrText.length;
+                oImg.src = arrUrl[num];
+                oText.innerHTML = arrText[num];
+            }
+            oNext.onclick = function(){
+                if (num<=3) {num ++}
+                else {
+                alert('最后面一张了')};
+
+            oPrev.onclick = function (){
+              if(num>=1){
+                  num --;
+              } else {
+                  alert ('最前面一张了');
+              }
+            };
+        };
+
+</script>
+</head>
+<body>
+<div id="content">
+    <a id="prev" href="javascript:;"><</a>
+    <a id="next" href="javascript:;">></a>
+   <p id="text">这是第一张图</p>
+        <span id="span1">
+            1/4
+        </span>
+    <img id="img1" src="1.jpg"/>
+
+</div>
+</body>
+</html>

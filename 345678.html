@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            var oBn1 = document.getElementById('bu1');
+            var oBn2 = document.getElementById('bu2');
+            var oP = document.getElementById('p1');
+
+            var num=15;
+            oBn1.onclick = function(){
+                if (num <= 22){
+                    num = num + 2;
+                    oP.style.fontSize =num+'px';}
+            };
+            oBn2.onclick = function(){
+                if (num >= 12) {
+                    num = num - 2;
+                    oP.style.fontSize =num+'px';}
+
+            };
+
+        };
+    </script>
+</head>
+<body>
+<input id="bu1" type="button" value="+"/>
+<input id="bu2" type="button" value="-"/>
+<p id="p1" style="font-size: 18px;">百度网盘为您提供文件的网络备份、同步和分享服务。
+    空间大、速度快、安全稳固,支持教育网加速,支持手机端
+    。现在注册即有机会享受15G的免费存储空间</p>
+</body>
+</html>

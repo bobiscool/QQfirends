@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <style>
+        ul,h2 {
+            padding:0;
+            margin:0;}
+        li {list-style: none}
+        #list {
+            width: 240px;
+            border: 1px solid #FC3;
+            margin: auto;
+        }
+        
+        #list .black .business .friends {
+            
+        }
+        #list h2 {
+            height: 30px;
+            line-height: 30px;
+            text-indent: 20px;
+            color:#FFCC33;
+            border-bottom: 1px solid #FFCC33;
+            background:url("8656651231.png") no-repeat left deepskyblue ;
+            display: block;
+        }
+        #list ul {display: none;}
+        #list ul li {
+            line-height: 24px; border-bottom: 1px solid #FC3;text-indent: 24px;}
+        
+        #list .active {background: url("8656651231副本.gif") no-repeat left darkcyan;}
+
+        #list ul .hover {background: #66FFFF;}
+    </style>
+    <script>
+        window.onload = function() {
+            var oH2 = document.getElementsByTagName('h2');
+            var oUl = document.getElementById('list');
+            var aUl = oUl.getElementsByTagName('ul');
+            var aLi = null;//又要准备  点击事件 消除前一个了
+
+            for (var i =0;i<oH2.length;i++){
+                oH2[i].index = i;
+                oH2[i].onclick = function (){
+                    if(this.className==''){
+                        this.className = 'active';
+                        oUl[this.index].style.display='block';
+                    }else {
+                        this.className = '';
+                        oUl.[this.index].style.display ='none';
+                    }
+
+                    for(var i=0;i<oUl.length;i++){
+                       aLi = aUl[i].getElementsByTagName('li');
+
+                        for(var j=0;j<aLi.length;j++){
+                            ali[j].onclick = function(){
+                              for(var n=0;n<aLi.length;n++){
+                                  aLi[n].style.backgroundColor='#fff';
+                              }
+                                this.style.backgroundColor = '#FC3';
+                            };
+                        }
+
+                    }
+
+                    //不能乱用i 这里 一个i是外面的  一个是里面的 但就是 没有 自己的
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+<ul id="list">
+<li class="friends">
+    <h2 class="">我的好友</h2>
+    <ul>
+        <li>张7</li>
+        <li>张1</li>
+        <li>张2</li>
+        <li>张3</li>
+        <li>张4</li>
+        <li>张5</li>
+        <li>张6</li>
+
+    </ul>
+</li>
+<li class="business">
+    <h2 class="">企业好友</h2>
+    <ul>
+        <li>张7</li>
+        <li>张1</li>
+        <li>张2</li>
+        <li>张3</li>
+        <li>张4</li>
+        <li>张5</li>
+        <li>张6</li>
+
+    </ul>
+
+</li>
+<li class="black">
+    <h2 class="">黑名单</h2>
+    <ul>
+        <li>张7</li>
+        <li>张1</li>
+        <li>张2</li>
+        <li>张3</li>
+        <li>张4</li>
+        <li>张5</li>
+        <li>张6</li>
+
+    </ul>
+
+</li>
+</ul>
+</body>
+</html>

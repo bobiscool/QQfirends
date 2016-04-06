@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+</head>
+<h1>snapshots</h1>
+<ul>
+    <li><a href="1.jpg" title="ghgd">fireworks</a> </li>
+    <li><a href="2.jpg" title="gdhks">njkjd</a> </li>
+    <li><a href="4.jpg" title="tgbnj"> yujkmof</a></li>
+    <li><a href="5.jpeg" title="tghjm">yehdbb</a> </li>
+   <img id="th" src="1.jpg" alt="my image gallery">
+</ul>
+<body>
+<script>
+    function showPic(whichPic)
+        var source = whichPic.getAttribute("href");
+        var placeholder = document.getElementById("th");
+        placeholder.setAttribute("src",source);
+
+</script>
+</body>
+</html>

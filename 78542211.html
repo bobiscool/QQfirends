@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+<script>
+    window.onload = function() {
+        var aNews = ['中国拒将“穆罕默德大军”头目列入联合国黑名印度向联合国安理会申请将“穆罕默德大军”的头目列入黑名单，中国暂时阻止了这一申请。4小时前阅读全文 中国拒将“穆罕默德大军”头目列入联合国黑名单',
+            '美总统奥巴马警告恐怖攻击将改变世界美国总统奥巴马在华盛顿举行的核安全峰会上说，恐怖主义者发动核攻击的威胁“改变世界”，真有此可能。',
+            '阅读全文 美总统奥巴马警告核恐怖攻击将改变世界',
+            '布鲁塞尔爆炸：警察罢工 机场继续关闭',
+            '美国大选直击：希拉里重返纽约“哈林”'
+        ];
+
+        var aLi= document.getElementsByTagName('li')
+        var n =0;
+        var oNews = document.getElementById('click');
+        oNews.onclick = function(){
+            aLi[n].innerHTML = aNews[n];
+            n++;
+        }
+
+    };
+</script>
+</head>
+
+<body>
+<input id="click" type="button" value="fuck me">
+<ul>
+    <li> </li>
+    <li> </li>
+    <li> </li>
+    <li> </li>
+    <li> </li>
+</ul>
+</body>
+</html>

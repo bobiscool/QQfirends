@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script>
+        window.onload = function(){
+          var aBtn = document.getElementsByTagName('input');
+            var arr =['A','B','C','D'];
+
+            for (var i =0; i < aBtn.length;i++){
+                aBtn[i].num = 0;
+                aBtn[i].onclick = function(){
+                    this.value =arr[this.num];
+                    this.num++;
+                    if(this.num >= arr.length){
+                        this.num =0;
+                    }
+                };
+            }
+        };
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value ='0'/>
+<input type="button" value ='0'/>
+<input type="button" value ='0'/>
+<input type="button" value ='0'/>
+<input type="button" value ='0'/>
+<input type="button" value ='0'/>
+
+</body>
+</html>

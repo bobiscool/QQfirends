@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <img id="img1" src="4.jpg"/>
+
+<script>
+    var olmg = document.getElementById('img1');
+    var onOff = true;
+    olmg.onclick = function(){
+      if (onOff){ olmg.src = '5.jpeg';
+          onOff = false;
+      } else {
+          olmg.src = '4.jpg';
+          onOff = true;
+      }
+    };
+</script>
+</body>
+</html>
